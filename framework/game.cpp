@@ -163,3 +163,11 @@ void Game::gameOver(int player){
     this->player[0]->gameOver(player == 0);
     this->player[1]->gameOver(player == 1);
 }
+
+Chess Game::getChess(int player, int index){
+    return this->chess[player][index];
+}
+
+int Game::getDice(){
+    return this->dice;
+}

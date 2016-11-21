@@ -35,6 +35,8 @@ public:
     bool terminated();
     void gameOver(int player);
     void print();
+    Chess getChess(int player, int index);
+    int getDice();
 };
 
 
