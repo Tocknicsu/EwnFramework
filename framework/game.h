@@ -20,6 +20,7 @@ private:
 public:
     Game();
     ~Game();
+	Game& operator=(const Game& game);
     /* reset a new game */
     void init();
     void setBoard(int _board[5][5]);

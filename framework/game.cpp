@@ -8,6 +8,18 @@ Game::Game(){
 
 Game::~Game(){
 }
+Game& Game::operator=(const Game& rhs){
+    for(int i = 0 ; i < 5 ; i++)
+        for(int j = 0 ; j < 5 ; j++)
+            this->board[i][j] = rhs.board[i][j];
+    this->turn = rhs.turn;
+    this->dice = rhs.dice;
+    for(int k = 0 ; k < 2 ; k++)
+        for(int i = 0 ; i < 6 ; i++)
+            this->chess[k][i] = rhs.chess[k][i];
+    this->player[0] = rhs.player[0];
+    this->player[1] = rhs.player[1];
+}
 
 void Game::init(){
     memset(this->board, 0, sizeof(this->board));
