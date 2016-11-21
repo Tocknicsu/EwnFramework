@@ -16,5 +16,5 @@ Movement RandomAI::generatorMove(int board[5][5], int dice){
     return movement;
 }
 
-void RandomAI::gameOver(bool win){
+void RandomAI::gameOver(int board[5][5], bool win){
 }

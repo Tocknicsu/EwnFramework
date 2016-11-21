@@ -9,7 +9,7 @@ public:
     ~Player();
     virtual void init(int argc, char **argv);
     virtual Movement generatorMove(int board[5][5], int dice);
-    virtual void gameOver(bool win);
+    virtual void gameOver(int board[5][5], bool win);
 };
 
 #endif

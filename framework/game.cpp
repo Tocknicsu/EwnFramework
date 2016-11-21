@@ -172,8 +172,12 @@ bool Game::terminated(){
 }
 
 void Game::gameOver(int player){
-    this->player[0]->gameOver(player == 0);
-    this->player[1]->gameOver(player == 1);
+    int playerBoard[5][5];
+    for(int i = 0 ; i < 2 ; i++){
+        this->turn = i;
+        this->genPlayerBoard(playerBoard);
+        this->player[i]->gameOver(playerBoard, player == i);
+    }
 }
 
 Chess Game::getChess(int player, int index){

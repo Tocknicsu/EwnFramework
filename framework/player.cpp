@@ -16,5 +16,5 @@ Movement Player::generatorMove(int board[5][5], int dice){
     return movement;
 }
 
-void Player::gameOver(bool win){
+void Player::gameOver(int board[5][5], bool win){
 }
