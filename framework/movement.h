@@ -5,8 +5,8 @@ struct Movement {
     int index;
     enum Direction {
         None,
-        Right,
         Down,
+        Right,
         RightDown
     } direction;
 };
