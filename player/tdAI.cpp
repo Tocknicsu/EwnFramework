@@ -1,6 +1,7 @@
 #include "tdAI.h"
 
 TDAI::TDAI(){
+    weight = NULL;
 }
 
 TDAI::~TDAI(){
