@@ -10,9 +10,14 @@ TDAI::~TDAI(){
             int re = write(fd, weight[i], weight_size[i] * sizeof(double));
         }
     }
-    for(int i = 0 ; i < (int)weight_size.size() ; i++)
-        delete [] weight[i];
-    delete [] weight;
+    if (weight != NULL) {
+        for(int i = 0 ; i < (int)weight_size.size() ; i++) {
+            if (weight[i] != NULL) {
+                delete [] weight[i];
+            }
+        }
+        delete [] weight;
+    }
 }
 
 void TDAI::init(int argc, char **argv){
